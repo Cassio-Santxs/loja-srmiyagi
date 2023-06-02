@@ -53,11 +53,7 @@ function init() {
     let itensSection = document.getElementById("itens_section");
 
     ITENS_LOJA.forEach(item => {
-        let itenTitle = document.createElement("div");
-
-        itenTitle.classList.add("item");
-
-        itenTitle.innerHTML = 
+        itensSection.innerHTML += 
         `
         <div class="item">
             <div class="img-bg">
@@ -69,8 +65,6 @@ function init() {
             <h2 class="item-price"> R$ ${item.preco}</h2>
         </div>
         `;
-
-        itensSection.appendChild(itenTitle);
     }) 
 }
 
